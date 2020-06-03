@@ -1,8 +1,9 @@
 #!/usr/bin/bash
-# Takes first argument as directory to read files from
-# and the second one as sleep timer.
 
-# test if both parameter are given
+# Uses first argument as directory to read files from
+# and the second one as time between background changes.
+
+# test if both parameters are given
 [[ -z $1 || -z $2 ]] && {
 	echo "Usage: $0 <directory> <time>"
 	echo "       directory: directory to take images from"
@@ -10,7 +11,7 @@
 	exit
 }
 
-# test if directory is valid
+# test if directory exists
 [ -d $1 ] || { 
 	echo "The directory $1 does not exist."
 	exit
