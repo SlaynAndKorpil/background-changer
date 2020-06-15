@@ -30,8 +30,7 @@ do
 		# skipping files that don't exist anymore
 		[ -f $file ] && {
 			echo "Displaying $file"
-			xwallpaper --maximize $file
-			sleep $2
+			xwallpaper --maximize $file && sleep $2
 		}
 	done
 done
